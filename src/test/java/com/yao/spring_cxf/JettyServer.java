@@ -4,7 +4,6 @@ import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
 import org.eclipse.jetty.util.log.StdErrLog;
-import org.eclipse.jetty.webapp.WebAppContext;
 
 /**
  * @author hongxia.huhx SnsJettyServer for Jetty
@@ -47,7 +46,7 @@ public class JettyServer {
         connector.setRequestHeaderSize(16246);
         server.setConnectors(new Connector[] { connector });
 
-        // 设置context
+       /* // 设置context
         WebAppContext context = new WebAppContext();
         
         context.setContextPath("/");
@@ -59,7 +58,7 @@ public class JettyServer {
         context.setClassLoader(Thread.currentThread().getContextClassLoader());
         context.setParentLoaderPriority(true);
         server.setHandler(context);
-
+*/
         // 启动Server
         try {
             server.start();
